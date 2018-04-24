@@ -9,13 +9,13 @@ import rx.Observer;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
 
-public class MainActivityViewModel {
+public class DictionaryMVVMViewModel {
 
     public ObservableField<String> wordToSearch = new ObservableField<>("");
     private RestFactory restFactory;
     public ObservableField<String> wordDefinition = new ObservableField<>("");
 
-    public MainActivityViewModel(RestFactory restFactory) {
+    public DictionaryMVVMViewModel(RestFactory restFactory) {
         this.restFactory = restFactory;
     }
 

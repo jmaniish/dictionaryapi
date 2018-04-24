@@ -8,15 +8,15 @@ import experiment.textfield.com.dictionaryapi.R;
 import experiment.textfield.com.dictionaryapi.databinding.ActivityMainBinding;
 import experiment.textfield.com.dictionaryapi.network.RestFactory;
 
-public class MainActivity extends AppCompatActivity {
+public class DictionaryMVVMActivity extends AppCompatActivity {
 
-    private MainActivityViewModel mainActivityViewModel;
+    private DictionaryMVVMViewModel dictionaryMVVMViewModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mainActivityViewModel = new MainActivityViewModel(new RestFactory());
+        dictionaryMVVMViewModel = new DictionaryMVVMViewModel(new RestFactory());
         ActivityMainBinding mainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
-        mainBinding.setMainViewModel(mainActivityViewModel);
+        mainBinding.setMainViewModel(dictionaryMVVMViewModel);
     }
 }
