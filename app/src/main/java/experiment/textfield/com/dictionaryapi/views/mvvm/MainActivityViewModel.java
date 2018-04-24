@@ -1,4 +1,4 @@
-package experiment.textfield.com.dictionaryapi.views;
+package experiment.textfield.com.dictionaryapi.views.mvvm;
 
 import android.databinding.ObservableField;
 import android.view.View;

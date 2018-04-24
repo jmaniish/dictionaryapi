@@ -6,7 +6,7 @@
 
         <variable
             name="mainViewModel"
-            type="experiment.textfield.com.dictionaryapi.views.MainActivityViewModel" />
+            type="experiment.textfield.com.dictionaryapi.views.mvvm.MainActivityViewModel" />
     </data>
 
     <LinearLayout
@@ -18,7 +18,7 @@
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin"
-        tools:context="experiment.textfield.com.dictionaryapi.views.MainActivity">
+        tools:context="experiment.textfield.com.dictionaryapi.views.mvvm.MainActivity">
 
         <android.support.v7.widget.AppCompatEditText
             android:id="@+id/word_entry"
