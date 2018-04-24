@@ -13,6 +13,8 @@ import experiment.textfield.com.dictionaryapi.network.RestFactory;
 public class DictionaryActivity extends AppCompatActivity implements DictionaryView {
 
     private TextView textView;
+    private Button goBtn;
+    private EditText editText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,15 +22,19 @@ public class DictionaryActivity extends AppCompatActivity implements DictionaryV
         setContentView(R.layout.activity_dictionary);
         final DictionaryPresenter dictionaryPresenter = new DictionaryPresenter(this, new RestFactory());
 
-        final EditText editText = (EditText) findViewById(R.id.word_entry_presenter);
-        textView = (TextView) findViewById(R.id.result_presenter);
-        Button goBtn = (Button) findViewById(R.id.go_btn_presenter);
+        setupUi();
         goBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 dictionaryPresenter.getMeaningForWord(editText.getText().toString());
             }
         });
+    }
+
+    private void setupUi() {
+        editText = (EditText) findViewById(R.id.word_entry_presenter);
+        textView = (TextView) findViewById(R.id.result_presenter);
+        goBtn = (Button) findViewById(R.id.go_btn_presenter);
     }
 
     @Override
